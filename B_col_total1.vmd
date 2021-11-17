@@ -1,0 +1,20 @@
+mol load pdb  test.pdb
+
+array set bvalue {
+}
+
+set all [atomselect top all]
+for {set i 1} {$i<=125 } {incr i} { 
+	if {[info exists bvalue($i)]} {
+	set sel1 [atomselect top "resid $i"]
+	puts "resid $i, $bvalue($i)"
+	$sel1 set beta $bvalue($i)
+	} else {
+	continue
+	}
+	
+}
+
+$all writepdb s2_difference_map.pdb
+
+

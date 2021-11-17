@@ -1,0 +1,47 @@
+proc interaction {segname index_beg index_end index_start index_fin filename} {
+
+#Loop through the atoms
+for {set index [expr {$index_beg +1}] } {$index < [expr {$index_end }] } {incr index} {
+
+#Interactive atom counter 
+puts "atom# = $index"
+
+#Gets the residue atoms that the residue you are looping through is interacting with
+set interact [atomselect top "hydrogen and segname $segname and index >$index_start and index<$index_fin and within 5 of hydrogen and segname $segname and index $index"]
+
+#The atoms that are being looped through
+set index_2  [atomselect top "hydrogen and segname $segname and index $index"]
+
+#Doesn't write a file if there is no interactions
+if {![$interact num]} {
+continue
+	}
+
+#Get the number of interacting residues
+set b [llength [$interact get segname]]
+
+#Loops through the interacting residues and writes a file for each interaction.
+#Each frame there is an interactions this file gets update with the new frame
+for { set a 0 } {$a < $b} {incr a} {
+#set filename "[$resid_2 get segname]_[$resid_2 get resid]_[$resid_2 get resname]_[$resid_2 get name]_[lindex [$interact get segname] $a]_[lindex [$interact get resid] $a]_[lindex [$interact get resname] $a]_[lindex [$interact get name] $a].txt"
+#set fileid [open $filename a+ 0777]
+
+set TM1_x [$index_2 get x]
+set TM1_y [$index_2 get y]
+set TM1_z [$index_2 get z]
+
+set TM2_x [lindex [$interact get x] $a]
+set TM2_y [lindex [$interact get y] $a]
+set TM2_z [lindex [$interact get z] $a]
+
+set distance [expr {pow(pow($TM1_x-$TM2_x,2)+pow($TM1_y-$TM2_y,2)+pow($TM1_z-$TM2_z,2),0.5)}]
+puts $distance
+set fileid [open $filename a+ 0777] 
+
+puts $fileid "[$index_2 get resid] [$index_2 get resname] [$index_2 get name]    [lindex [$interact get name] $a] [lindex [$interact get resid] $a] [lindex [$interact get resname] $a] $distance"
+close $fileid
+
+			
+		}
+	}
+} 

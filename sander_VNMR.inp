@@ -1,0 +1,55 @@
+ Sander restrained input 
+ &cntrl   
+ imin = 0, 
+ ntx= 5,
+ irest= 1, 
+ ntxo=1,
+ ioutfm = 0,
+ ntrx= 1,   
+ ntpr= 500,
+ iwrap= 0,
+ ntwr= 500, 
+ ntwx= 500,  
+ ntwv= 0, 
+ ntwe= 0, 
+ ntwprt= 0,  
+ ntf= 2, 
+ ntb= 1,
+ dielc= 1.000,
+ igb=0,
+ cut=12.0, 
+ ibelly= 0,
+ ntr= 0,
+ maxcyc= 1000,
+ ncyc= 100,
+ ntmin= 1,
+ nstlim= 1000000,
+ dx0=  0.01, 
+ dxm= 0.5, 
+ drms= 0.0001,
+ dt= 0.002,  
+ tempi= 300.000, 
+ temp0= 300.0,
+ tautp= 1,
+ ntt= 1, 
+ ntp= 0, 
+ pres0= 1.000, 
+ comp= 44.600, 
+ npscal= 1, 
+ ntc= 2,
+ tol= 0.001,
+ amber7_compat =1,
+ pencut=0.1,
+ ipnlty=1, nmropt=1,
+ &end
+ &wt type='TEMP0', istep1=0,istep2=150000,value1=300.0,
+  value2=300.0,  &end
+ &wt type='END' &end
+ LISTOUT=POUT 
+ DISANG=NMRsander_1K4C_Hbond_dihedral_1.res
+
+
+
+
+
+

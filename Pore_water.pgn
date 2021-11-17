@@ -1,0 +1,17 @@
+ # need psfgen module and topology
+package require psfgen
+topology top_all27_prot_lipid.inp
+
+
+segment POR  { 
+    pdb Porewater_cut.pdb
+    last none
+    first none
+    auto none
+
+} 
+coordpdb Porewater_cut.pdb POR
+
+writepsf Porewater_2.psf 
+guesscoord 
+writepdb Porewater_2.pdb 

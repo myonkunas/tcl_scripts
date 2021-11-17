@@ -1,0 +1,99 @@
+grep SMD  p1.0/SMD_14_1.0CVd.results|grep -v I   |awk '{print $5, $8}' > fz1.0d.dat
+echo " " >> fz1.0d.dat
+grep SMD  p1.0/SMD_14_1.0CVd_2.results|grep -v I |awk '{print $5, $8}' >> fz1.0d.dat
+echo " " >> fz1.0d.dat
+grep SMD  p1.0/SMD_14_1.0CVd_3.results|grep -v I |awk '{print $5, $8}' >> fz1.0d.dat
+echo " " >> fz1.0d.dat
+grep SMD  p1.0/SMD_14_1.0CVd_4.results|grep -v I |awk '{print $5, $8}' >> fz1.0d.dat
+
+
+grep SMD  0.7/SMD_14-0.7CVu.results|grep -v I   |awk '{print $5, $8}' > fz0.7u.dat
+echo " " >> fz0.7u.dat
+grep SMD  0.7/SMD_14-0.7CVu_2.results|grep -v I |awk '{print $5, $8}' >> fz0.7u.dat
+echo " " >> fz0.7u.dat
+grep SMD  0.7/SMD_14-0.7CVu_3.results|grep -v I |awk '{print $5, $8}' >> fz0.7u.dat
+echo " " >> fz0.7u.dat
+grep SMD  0.7/SMD_14-0.7CVu_4.results|grep -v I |awk '{print $5, $8}' >> fz0.7u.dat
+
+
+grep SMD  0.7/SMD_14-0.7CVd.results|grep -v I   |awk '{print $5, $8}' > fz0.7d.dat
+echo " " >> fz0.7d.dat
+grep SMD  0.7/SMD_14-0.7CVd_2.results|grep -v I |awk '{print $5, $8}' >> fz0.7d.dat
+echo " " >> fz0.7d.dat
+grep SMD  0.7/SMD_14-0.7CVd_3.results|grep -v I |awk '{print $5, $8}' >> fz0.7d.dat
+echo " " >> fz0.7d.dat
+grep SMD  0.7/SMD_14-0.7CVd_4.results|grep -v I |awk '{print $5, $8}' >> fz0.7d.dat
+
+
+grep SMD  2.7/SMD_14-2.7CVu.results|grep -v I   |awk '{print $5, $8}' > fz2.7u.dat
+echo " " >> fz2.7u.dat
+grep SMD  2.7/SMD_14-2.7CVu_2.results|grep -v I |awk '{print $5, $8}' >> fz2.7u.dat
+echo " " >> fz2.7u.dat
+grep SMD  2.7/SMD_14-2.7CVu_3.results|grep -v I |awk '{print $5, $8}' >> fz2.7u.dat
+echo " " >> fz2.7u.dat
+grep SMD  2.7/SMD_14-2.7CVu_4.results|grep -v I |awk '{print $5, $8}' >> fz2.7u.dat
+
+
+grep SMD  2.7/SMD_14-2.7CVd.results|grep -v I   |awk '{print $5, $8}' > fz2.7d.dat
+echo " " >> fz2.7d.dat
+grep SMD  2.7/SMD_14-2.7CVd_2.results|grep -v I |awk '{print $5, $8}' >> fz2.7d.dat
+echo " " >> fz2.7d.dat
+grep SMD  2.7/SMD_14-2.7CVd_3.results|grep -v I |awk '{print $5, $8}' >> fz2.7d.dat
+echo " " >> fz2.7d.dat
+grep SMD  2.7/SMD_14-2.7CVd_4.results|grep -v I |awk '{print $5, $8}' >> fz2.7d.dat
+
+
+grep SMD  5.7/SMD_14-5.7CVu.results|grep -v I   |awk '{print $5, $8}' > fz5.7u.dat
+echo " " >> fz5.7u.dat
+grep SMD  5.7/SMD_14-5.7CVu_2.results|grep -v I |awk '{print $5, $8}' >> fz5.7u.dat
+echo " " >> fz5.7u.dat
+grep SMD  5.7/SMD_14-5.7CVu_3.results|grep -v I |awk '{print $5, $8}' >> fz5.7u.dat
+echo " " >> fz5.7u.dat
+grep SMD  5.7/SMD_14-5.7CVu_4.results|grep -v I |awk '{print $5, $8}' >> fz5.7u.dat
+
+
+grep SMD  5.7/SMD_14-5.7CVd.results|grep -v I   |awk '{print $5, $8}' > fz5.7d.dat
+echo " " >> fz5.7d.dat
+grep SMD  5.7/SMD_14-5.7CVd_2.results|grep -v I |awk '{print $5, $8}' >> fz5.7d.dat
+echo " " >> fz5.7d.dat
+grep SMD  5.7/SMD_14-5.7CVd_3.results|grep -v I |awk '{print $5, $8}' >> fz5.7d.dat
+echo " " >> fz5.7d.dat
+grep SMD  5.7/SMD_14-5.7CVd_4.results|grep -v I |awk '{print $5, $8}' >> fz5.7d.dat
+
+
+grep SMD  8.8/SMD_14-8.8CVu.results|grep -v I   |awk '{print $5, $8}' > fz8.8u.dat
+echo " " >> fz8.8u.dat
+grep SMD  8.8/SMD_14-8.8CVu_2.results|grep -v I |awk '{print $5, $8}' >> fz8.8u.dat
+echo " " >> fz8.8u.dat
+grep SMD  8.8/SMD_14-8.8CVu_3.results|grep -v I |awk '{print $5, $8}' >> fz8.8u.dat
+echo " " >> fz8.8u.dat
+grep SMD  8.8/SMD_14-8.8CVu_4.results|grep -v I |awk '{print $5, $8}' >> fz8.8u.dat
+
+
+grep SMD  8.8/SMD_14-8.8CVd.results|grep -v I   |awk '{print $5, $8}' > fz8.8d.dat
+echo " " >> fz8.8d.dat
+grep SMD  8.8/SMD_14-8.8CVd_2.results|grep -v I |awk '{print $5, $8}' >> fz8.8d.dat
+echo " " >> fz8.8d.dat
+grep SMD  8.8/SMD_14-8.8CVd_3.results|grep -v I |awk '{print $5, $8}' >> fz8.8d.dat
+echo " " >> fz8.8d.dat
+grep SMD  8.8/SMD_14-8.8CVd_4.results|grep -v I |awk '{print $5, $8}' >> fz8.8d.dat
+
+
+grep SMD  11/SMD_14-11CVu.results|grep -v I   |awk '{print $5, $8}' > fz11u.dat
+echo " " >> fz11u.dat
+grep SMD  11/SMD_14-11CVu_2.results|grep -v I |awk '{print $5, $8}' >> fz11u.dat
+echo " " >> fz11u.dat
+grep SMD  11/SMD_14-11CVu_3.results|grep -v I |awk '{print $5, $8}' >> fz11u.dat
+echo " " >> fz11u.dat
+grep SMD  11/SMD_14-11CVu_4.results|grep -v I |awk '{print $5, $8}' >> fz11u.dat
+
+
+grep SMD  11/SMD_14-11CVd.results|grep -v I   |awk '{print $5, $8}' > fz11d.dat
+echo " " >> fz11d.dat
+grep SMD  11/SMD_14-11CVd_2.results|grep -v I |awk '{print $5, $8}' >> fz11d.dat
+echo " " >> fz11d.dat
+grep SMD  11/SMD_14-11CVd_3.results|grep -v I |awk '{print $5, $8}' >> fz11d.dat
+echo " " >> fz11d.dat
+grep SMD  11/SMD_14-11CVd_4.results|grep -v I |awk '{print $5, $8}' >> fz11d.dat
+
+

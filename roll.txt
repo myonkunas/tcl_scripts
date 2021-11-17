@@ -1,0 +1,46 @@
+##
+## VMD script to vary the pitch and yaw of a molecule in a lemniscate sort
+## of pattern, as an alternative to rotation movies etc.
+##
+
+set times     1; # number of times to animate the sequence  
+set steps    80; # number of frames per complete sequence
+set yangle 15.0; # Y-axis arc angle to sweep over
+set xangle 10.0; # X-axis arc angle to sweep over (yangle / 2.0 or so is good)
+
+proc roll_save_viewpoint {} {
+   global viewpoints
+   if [info exists viewpoints] {unset viewpoints}
+   # get the current matricies
+   foreach mol [molinfo list] {
+      set viewpoints($mol) [molinfo $mol get { center_matrix rotate_matrix scale_matrix global_matrix }]
+   }
+}
+
+proc roll_restore_viewpoint {} {
+   global viewpoints
+   foreach mol [molinfo list] {
+      if [info exists viewpoints($mol)] {
+         molinfo $mol set { center_matrix rotate_matrix scale_matrix global_matrix } $viewpoints($mol)
+      }
+   }
+}
+
+roll_save_viewpoint;  # save original viewpoint
+
+for {set t 0} {$t<$times} {incr t 1} { 
+  for {set i 0} {$i<$steps} {incr i 1} {
+    display resetview
+    roll_restore_viewpoint; # restore original viewpoint
+  
+    # now tweak relative to that view orientation
+    set pipcnt [expr 6.28 * ($i / ($steps * 1.0))] 
+    rotate x by [expr $xangle * sin($pipcnt * 2.0)]
+    rotate y by [expr $yangle * sin($pipcnt)]
+    display update ui
+  }
+}
+display resetview
+roll_restore_viewpoint; # restore original viewpoint
+
+

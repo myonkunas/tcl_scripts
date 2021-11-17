@@ -1,0 +1,22 @@
+# Load a pdb and psf file into both psfgen and VMD.
+resetpsf 
+readpsf  CaM_Ca_halothane_xray_protein_calcium_final_050505.psf
+coordpdb CaM_Ca_halothane_xray_protein_calcium_final_050505.pdb
+mol load psf CaM_Ca_halothane_xray_protein_calcium_final_050505.psf pdb CaM_Ca_halothane_xray_protein_calcium_final_050505.pdb
+
+set removelist [atomselect top "segname CAM"]
+set removelist2 [$removelist get resid]
+set removelist3 [lsort -unique -integer $removelist2]
+
+foreach resid $removelist3 {
+delatom CAM $resid
+}
+
+#writepsf CaM_Ca_3dockedhalo_xray_hydrated_ionized_final_092104.psf
+#writepdb CaM_Ca_3dockedhalo_xray_hydrated_ionized_final_092104.pdb
+
+writepsf CaM_Ca_halothane_xray_CA_final_050505.psf
+writepdb CaM_Ca_halothane_xray_CA_final_050505.pdb
+
+
+

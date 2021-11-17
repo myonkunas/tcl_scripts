@@ -1,0 +1,13 @@
+
+set i 183;
+while {$i<=370} {
+	  
+	set var [atomselect top "resid $i"]	
+	set y [expr $i-182]
+	$var set resid $y	
+	incr i 
+
+}
+
+
+

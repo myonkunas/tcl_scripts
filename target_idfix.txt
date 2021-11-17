@@ -1,0 +1,13 @@
+
+set i 1;
+while {$i<=125} {
+	  
+	set var [atomselect top "resid $i"]	
+	set y [expr $i+116]
+	$var set resid $y	
+	incr i 
+
+}
+
+
+

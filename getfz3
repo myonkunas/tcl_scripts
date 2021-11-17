@@ -1,0 +1,114 @@
+grep SMD  p1.0/SMD_14_1.0CVd.results|grep -v I   |awk '{$2=950-$2/1000;print $2,$5,$8}' > tmp1
+grep SMD  p1.0/SMD_14_1.0CVd_2.results|grep -v I |awk '{$2=950-$2/1000;print $2,$5,$8}' > tmp2
+grep SMD  p1.0/SMD_14_1.0CVd_3.results|grep -v I |awk '{$2=950-$2/1000;print $2,$5,$8}' > tmp3
+#grep SMD  p1.0/SMD_14_1.0CVd_4.results|grep -v I |awk '{$2=925-$2/1000;print $2,$5,$8}' > tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+mv tmp123  fz1.0d.dat 
+
+
+
+grep SMD  0.7/SMD_14-0.7CVu.results|grep -v I   |awk '{$2=$2/1000+650;print $2,$5,$8}' >  tmp1
+grep SMD  0.7/SMD_14-0.7CVu_2.results|grep -v I |awk '{$2=$2/1000+650;print $2,$5,$8}' > tmp2
+grep SMD  0.7/SMD_14-0.7CVu_3.results|grep -v I |awk '{$2=$2/1000+650;print $2,$5,$8}' > tmp3
+grep SMD  0.7/SMD_14-0.7CVu_4.results|grep -v I |awk '{$2=$2/1000+650;print $2,$5,$8}' > tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz0.7u.dat 
+
+
+grep SMD  0.7/SMD_14-0.7CVd.results|grep -v I   |awk '{$2=650-$2/1000;print $2,$5,$8}' >tmp1
+grep SMD  0.7/SMD_14-0.7CVd_2.results|grep -v I |awk '{$2=650-$2/1000;print $2,$5,$8}' >tmp2 
+grep SMD  0.7/SMD_14-0.7CVd_3.results|grep -v I |awk '{$2=650-$2/1000;print $2,$5,$8}' >tmp3 
+grep SMD  0.7/SMD_14-0.7CVd_4.results|grep -v I |awk '{$2=650-$2/1000;print $2,$5,$8}' >tmp4 
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz0.7d.dat 
+
+
+
+grep SMD  2.7/SMD_14-2.7CVu.results|grep -v I   |awk '{$2=550+$2/1000;print $2,$5,$8}'>tmp1	     
+grep SMD  2.7/SMD_14-2.7CVu_2.results|grep -v I |awk '{$2=550+$2/1000;print $2,$5,$8}'>tmp2	     
+grep SMD  2.7/SMD_14-2.7CVu_3.results|grep -v I |awk '{$2=550+$2/1000;print $2,$5,$8}'>tmp3	     
+grep SMD  2.7/SMD_14-2.7CVu_4.results|grep -v I |awk '{$2=550+$2/1000;print $2,$5,$8}'>tmp4	     
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz2.7u.dat 
+
+
+
+grep SMD  2.7/SMD_14-2.7CVd.results|grep -v I   |awk '{$2=550-$2/1000;print $2,$5,$8}' >tmp1
+grep SMD  2.7/SMD_14-2.7CVd_2.results|grep -v I |awk '{$2=550-$2/1000;print $2,$5,$8}' >tmp2
+grep SMD  2.7/SMD_14-2.7CVd_3.results|grep -v I |awk '{$2=550-$2/1000;print $2,$5,$8}' >tmp3
+grep SMD  2.7/SMD_14-2.7CVd_4.results|grep -v I |awk '{$2=550-$2/1000;print $2,$5,$8}' >tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz2.7d.dat 
+
+
+grep SMD  5.7/SMD_14-5.7CVu.results|grep -v I   |awk '{$2=400+$2/1000;print $2,$5,$8}' >tmp1
+grep SMD  5.7/SMD_14-5.7CVu_2.results|grep -v I |awk '{$2=400+$2/1000;print $2,$5,$8}' >tmp2
+grep SMD  5.7/SMD_14-5.7CVu_3.results|grep -v I |awk '{$2=400+$2/1000;print $2,$5,$8}' >tmp3
+grep SMD  5.7/SMD_14-5.7CVu_4.results|grep -v I |awk '{$2=400+$2/1000;print $2,$5,$8}' >tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz5.7u.dat 
+
+
+grep SMD  5.7/SMD_14-5.7CVd.results|grep -v I   |awk '{$2=400-$2/1000;print $2,$5,$8}'  >tmp1
+grep SMD  5.7/SMD_14-5.7CVd_2.results|grep -v I |awk '{$2=400-$2/1000;print $2,$5,$8}'  >tmp2
+grep SMD  5.7/SMD_14-5.7CVd_3.results|grep -v I |awk '{$2=400-$2/1000;print $2,$5,$8}'  >tmp3
+grep SMD  5.7/SMD_14-5.7CVd_4.results|grep -v I |awk '{$2=400-$2/1000;print $2,$5,$8}'  >tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz5.7d.dat 
+
+
+grep SMD  8.8/SMD_14-8.8CVu.results|grep -v I   |awk '{$2=200+$2/1000;print $2,$5,$8}'   >tmp1
+grep SMD  8.8/SMD_14-8.8CVu_2.results|grep -v I |awk '{$2=200+$2/1000;print $2,$5,$8}'   >tmp2
+grep SMD  8.8/SMD_14-8.8CVu_3.results|grep -v I |awk '{$2=200+$2/1000;print $2,$5,$8}'   >tmp3
+grep SMD  8.8/SMD_14-8.8CVu_4.results|grep -v I |awk '{$2=200+$2/1000;print $2,$5,$8}'   >tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz8.8u.dat 
+
+
+grep SMD  8.8/SMD_14-8.8CVd.results|grep -v I   |awk '{$2=200-$2/1000;print $2,$5,$8}'   >tmp1
+grep SMD  8.8/SMD_14-8.8CVd_2.results|grep -v I |awk '{$2=200-$2/1000;print $2,$5,$8}'   >tmp2
+grep SMD  8.8/SMD_14-8.8CVd_3.results|grep -v I |awk '{$2=200-$2/1000;print $2,$5,$8}'   >tmp3
+grep SMD  8.8/SMD_14-8.8CVd_4.results|grep -v I |awk '{$2=200-$2/1000;print $2,$5,$8}'   >tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz8.8d.dat 
+
+
+grep SMD  11/SMD_14-11CVu.results|grep -v I   |awk '{$2=100+$2/1000;print $2,$5,$8}'    >tmp1
+grep SMD  11/SMD_14-11CVu_2.results|grep -v I |awk '{$2=100+$2/1000;print $2,$5,$8}'    >tmp2
+grep SMD  11/SMD_14-11CVu_3.results|grep -v I |awk '{$2=100+$2/1000;print $2,$5,$8}'    >tmp3
+grep SMD  11/SMD_14-11CVu_4.results|grep -v I |awk '{$2=100+$2/1000;print $2,$5,$8}'    >tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz11u.dat 
+
+
+grep SMD  11/SMD_14-11CVd.results|grep -v I |awk '{$2=100-$2/1000;print $2,$5,$8}'     >tmp1
+grep SMD  11/SMD_14-11CVd_2.results|grep -v I |awk '{$2=100-$2/1000;print $2,$5,$8}'   >tmp2
+grep SMD  11/SMD_14-11CVd_3.results|grep -v I |awk '{$2=100-$2/1000;print $2,$5,$8}'   >tmp3
+grep SMD  11/SMD_14-11CVd_4.results|grep -v I |awk '{$2=100-$2/1000;print $2,$5,$8}'   >tmp4
+paste tmp1 tmp2 > tmp12
+paste tmp12 tmp3 > tmp123
+paste tmp123 tmp4 > tmp1234
+mv -f tmp1234 fz11d.dat 
+
+rm -f tmp* 
+
+cat fz0.7u.dat fz0.7d.dat fz2.7u.dat fz2.7d.dat fz5.7u.dat fz5.7d.dat fz8.8u.dat fz8.8d.dat fz11u.dat fz11d.dat |sort -n |awk '{print $2,$3, $5, $6, $8, $9, $11,$12}'> fzall.dat

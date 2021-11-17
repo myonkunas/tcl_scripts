@@ -1,0 +1,23 @@
+# Load a pdb and psf file into both psfgen and VMD.
+resetpsf
+readpsf  AChR_A7_362POPC_ionized_water_081304.psf
+coordpdb AChR_A7_362POPC_ionized_water_081304.pdb
+mol load psf AChR_A7_362POPC_ionized_water_081304.psf pdb AChR_A7_362POPC_ionized_water_081304.pdb
+
+
+set removelist [atomselect top "same residue as not segname POR and within 1 of segname POR"]
+set removelist2 [$removelist get resid]
+set removelist3 [lsort -unique -integer $removelist2]
+
+foreach resid $removelist3 {
+delatom WATB $resid
+}
+
+
+
+
+writepsf AChR_A7_362POPC_ionized_water_final_081304.psf
+writepdb AChR_A7_362POPC_ionized_water_final_081304.pdb
+
+
+

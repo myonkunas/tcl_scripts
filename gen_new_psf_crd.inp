@@ -1,0 +1,41 @@
+*Generate new PSF and CRD with CHARMM
+*
+! Read in topology and parameters from CHARMM 27 FF
+
+open unit 1 read form name top_all27_prot_na.rtf
+read rtf card unit 1
+
+open unit 2 read form name par_all27_prot_na.prm
+read para card unit 2
+
+!get the sequence from the PDB
+open unit 21 read form name calmodulin.pdb
+read sequ pdb unit 21
+close unit 21
+
+gene cam setup
+
+open unit 20 read form name calmodulin.pdb
+read coor PDB unit 20
+
+!check the coordinates
+print coor select .not. hydrogen .and. .not. initialized end
+
+ic param
+
+gene ca setup
+
+open unit 22 read form name calcium.pdb
+read coor PDB unit 22
+
+!check the coordinates
+print coor
+
+! save the PSF and coordinates for later use
+
+open unit 90 write psf card name cam_ca.psf
+* none
+*
+open unit 91 write coor card name cam_ca.crd
+* none
+*

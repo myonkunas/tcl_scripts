@@ -1,0 +1,12 @@
+#!/bin/csh
+# version 1.1, change grep \ R\   to grep -v \ Q\ , so that the status "E" can be included.
+# to list the spare cpu, and processor number for each process
+
+set TMP = /tmp
+qstat |grep  rachel |awk '{print $0}'|grep -v  \ Q\    >  tempstatus
+qstat -f |grep exec_host|awk '{FS="64";print $2}'|cut -c1 |paste tempstatus - >  tempstatus1
+qstat |grep  rachel |awk '{print $0}' >  tempstatus3
+qstat -f |grep nodes |awk '{ print $3}'  |paste tempstatus3 - |grep -v \ Q\   |awk '{print $7}' >  tempstatus2
+echo "JobId           Command            User              RunTime Status  Queue      Node    Processor"
+paste tempstatus1 tempstatus2|sort +6
+rm -f  tempstatus tempstatus1 tempstatus2 tempstatus3
